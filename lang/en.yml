@@ -1,0 +1,6 @@
+en:
+  SilverStripe\Security\Member:
+    PLURALNAME: 'Users'
+    SINGULARNAME: 'User'
+  SilverStripe\Admin\SecurityAdmin:
+    MENUTITLE: Permissions

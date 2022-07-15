@@ -6,11 +6,35 @@ After:
   - 'cmsstickymenupreference'
   - 'cmspreviewpreference'
   - 'session-manager'
+  - 'fiobundle-foundation-security'
 ---
 
 SilverStripe\Security\Member:
   extensions:
     - Fromholdio\Bouncer\Extensions\MemberExtension
+
+Fromholdio\Bouncer\Admin\MembersAdmin:
+  menu_priority: 70
+
+Fromholdio\Bouncer\Admin\GroupsAdmin:
+  menu_priority: 60
+
+Fromholdio\Bouncer\Admin\AccessAdmin:
+  menu_priority: 50
+  
+SilverStripe\Admin\SecurityAdmin:
+  menu_priority: -50
+  menu_icon_class: 'font-icon-cog'
+
+SilverStripe\Admin\LeftAndMain:
+  menu_groups:
+    Security:
+      icon: 'shield'
+      children:
+        - Fromholdio-Bouncer-Admin-MembersAdmin
+        - Fromholdio-Bouncer-Admin-GroupsAdmin
+        - Fromholdio-Bouncer-Admin-AccessAdmin
+        - SilverStripe-Admin-SecurityAdmin
 
 ---
 Name: fromholdio-bouncer-groups
