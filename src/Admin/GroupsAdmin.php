@@ -2,11 +2,11 @@
 
 namespace Fromholdio\Bouncer\Admin;
 
-use SilverStripe\Admin\ModelAdmin;
+use Fromholdio\Helpers\ModelAdmin\BaseModelAdmin;
 use SilverStripe\ORM\DataList;
 use SilverStripe\Security\Group;
 
-class GroupsAdmin extends ModelAdmin
+class GroupsAdmin extends BaseModelAdmin
 {
     private static $managed_models = [
         Group::class

@@ -2,10 +2,10 @@
 
 namespace Fromholdio\Bouncer\Admin;
 
-use SilverStripe\Admin\ModelAdmin;
+use Fromholdio\Helpers\ModelAdmin\BaseModelAdmin;
 use SilverStripe\Security\Member;
 
-class MembersAdmin extends ModelAdmin
+class MembersAdmin extends BaseModelAdmin
 {
     private static $managed_models = [
         Member::class
