@@ -1,0 +1,30 @@
+{
+  "name": "fromholdio/silverstripe-bouncer",
+  "type": "silverstripe-vendormodule",
+  "description": "",
+  "license": "BSD-3-Clause",
+  "keywords": ["silverstripe"],
+  "homepage": "https://github.com/fromholdio/silverstripe-bouncer",
+  "support": {
+    "issues": "https://github.com/fromholdio/silverstripe-bouncer/issues"
+  },
+  "authors": [{
+    "name": "Luke Fromhold",
+    "homepage": "https://fromhold.io"
+  }],
+  "require": {
+    "silverstripe/vendor-plugin": "^1.0",
+    "silverstripe/framework": "^4.1",
+    "fromholdio/silverstripe-helpers-gridfields": "^1.0.1",
+    "fromholdio/silverstripe-helpers-modeladmin": "^1.0.0",
+    "fromholdio/silverstripe-generic-config": "^1.0.0",
+    "unclecheese/display-logic": "^2.0.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Fromholdio\\Bouncer\\": "src/"
+    }
+  },
+  "prefer-stable": true,
+  "minimum-stability": "dev"
+}

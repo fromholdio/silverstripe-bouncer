@@ -1,0 +1,51 @@
+---
+Name: fromholdio-bouncer
+After:
+  - 'socialmeta'
+  - 'fromholdio-imitation'
+  - 'cmsstickymenupreference'
+  - 'cmspreviewpreference'
+  - 'session-manager'
+---
+
+SilverStripe\Security\Member:
+  extensions:
+    - Fromholdio\Bouncer\Extensions\MemberExtension
+
+---
+Name: fromholdio-bouncer-groups
+After:
+  - 'fio-configured-groups'
+---
+
+SilverStripe\Security\Group:
+  extensions:
+    - Fromholdio\Bouncer\Extensions\GroupExtension
+  configured_groups:
+    administrators:
+      title: Administrators
+      sort: 0
+      permissions:
+        - ADMIN
+    managers:
+      title: Managers
+      sort: 1
+      permissions:
+        - CMS_ACCESS_CMSMain
+        - CMS_ACCESS_AssetAdmin
+        - 'CMS_ACCESS_Fromholdio\Bouncer\Admin\GroupsAdmin'
+        - 'CMS_ACCESS_Fromholdio\Bouncer\Admin\MembersAdmin'
+        - EDIT_ACCESSCONFIG
+        - SITETREE_REORGANISE
+    editors:
+      title: Editors
+      sort: 2
+      permissions:
+        - CMS_ACCESS_CMSMain
+        - CMS_ACCESS_AssetAdmin
+        - SITETREE_REORGANISE
+    previewers:
+      title: Previewers
+      sort: 3
+      permissions:
+        - VIEW_DRAFT_CONTENT
