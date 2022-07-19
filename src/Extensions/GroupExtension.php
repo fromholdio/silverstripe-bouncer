@@ -90,6 +90,10 @@ class GroupExtension extends DataExtension
                     if ($adminGroup) {
                         unset($parentSource[(int) $adminGroup->getField('ID')]);
                     }
+                    $managersGroup = Group::get()->find('Code', 'managers');
+                    if ($managersGroup) {
+                        unset($parentSource[(int) $managersGroup->getField('ID')]);
+                    }
                 }
                 asort($parentSource);
                 $parentField->setSource($parentSource);
