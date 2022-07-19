@@ -21,7 +21,7 @@ Fromholdio\Bouncer\Admin\GroupsAdmin:
 
 Fromholdio\Bouncer\Admin\AccessAdmin:
   menu_priority: 50
-  
+
 SilverStripe\Admin\SecurityAdmin:
   menu_priority: -50
   menu_icon_class: 'font-icon-cog'
@@ -60,14 +60,26 @@ SilverStripe\Security\Group:
         - 'CMS_ACCESS_Fromholdio\Bouncer\Admin\GroupsAdmin'
         - 'CMS_ACCESS_Fromholdio\Bouncer\Admin\MembersAdmin'
         - EDIT_ACCESSCONFIG
+        - FILE_EDIT_ALL
+        - SITETREE_VIEW_ALL
+        - SITETREE_EDIT_ALL
         - SITETREE_REORGANISE
+        - VIEW_DRAFT_CONTENT
+        - CMS_ACCESS_SecurityAdmin
+        - EDIT_PERMISSIONS
+        - SITETREE_GRANT_ACCESS
+        - EDIT_SITECONFIG
     editors:
       title: Editors
       sort: 2
       permissions:
         - CMS_ACCESS_CMSMain
         - CMS_ACCESS_AssetAdmin
+        - FILE_EDIT_ALL
+        - SITETREE_VIEW_ALL
+        - SITETREE_EDIT_ALL
         - SITETREE_REORGANISE
+        - VIEW_DRAFT_CONTENT
     previewers:
       title: Previewers
       sort: 3
