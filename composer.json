@@ -1,7 +1,7 @@
 {
   "name": "fromholdio/silverstripe-bouncer",
   "type": "silverstripe-vendormodule",
-  "description": "",
+  "description": "Providing admin sections that replace the OOTB Silverstripe SecurityAdmin",
   "license": "BSD-3-Clause",
   "keywords": ["silverstripe"],
   "homepage": "https://github.com/fromholdio/silverstripe-bouncer",
