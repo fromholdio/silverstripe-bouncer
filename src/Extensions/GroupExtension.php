@@ -2,8 +2,8 @@
 
 namespace Fromholdio\Bouncer\Extensions;
 
-use Fromholdio\Helpers\GridFields\Forms\GridFieldAddNewManyManyThroughSearchButton;
-use Fromholdio\Helpers\GridFields\Forms\GridFieldConfig_Core;
+use Fromholdio\GridFieldAddNewManyManyThrough\GridFieldAddNewManyManyThroughSearchButton;
+use Fromholdio\GridFieldExtraData\GridFieldConfig_ExtraData;
 use SilverStripe\Admin\SecurityAdmin;
 use SilverStripe\Control\Controller;
 use SilverStripe\Forms\FieldList;
@@ -120,7 +120,7 @@ class GroupExtension extends DataExtension
             );
             $memberButton->setTitle('Attach user');
 
-            $membersConfig = GridFieldConfig_Core::create(
+            $membersConfig = GridFieldConfig_ExtraData::create(
                 null, 20, true, false, null, false, true
             );
 

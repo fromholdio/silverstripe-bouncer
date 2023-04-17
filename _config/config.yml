@@ -2,11 +2,9 @@
 Name: fromholdio-bouncer
 After:
   - 'socialmeta'
-  - 'fromholdio-imitation'
   - 'cmsstickymenupreference'
   - 'cmspreviewpreference'
   - 'session-manager'
-  - 'fiobundle-foundation-security'
 ---
 
 SilverStripe\Security\Member:
